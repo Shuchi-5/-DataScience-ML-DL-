@@ -1,0 +1,221 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "1de9826a",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      " enter a string : My name is Shuchi \n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "'My'"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Q1. Write a lambda expression to \n",
+    "# extract first word of a string\n",
+    "\n",
+    "a= lambda a:a.split() [0]\n",
+    "s=input(\" enter a string : \")\n",
+    "a(s)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "56332b44",
+   "metadata": {
+    "scrolled": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      " enter a string: My name is Shuchi \n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "'My'"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#Q2. Write a function to extract first\n",
+    "# word of s string (with many words \n",
+    "# separated by space).\n",
+    "\n",
+    "def first_word(s):\n",
+    "    return s.split()[0]\n",
+    "s=input(\" enter a string: \")\n",
+    "first_word(s)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "6d4afe10",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['python', 'is', 'clear', 'and']"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Q3. Extract the first word from every \n",
+    "# string from a list of strings by \n",
+    "# using map function.\n",
+    "\n",
+    "los= [\" python code is\", \"  is clear and \",\" clear and easy to\", \"and easy to understand\"] \n",
+    "n=lambda n:n.split()[0]\n",
+    "list(map(n,los))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "c977d3bc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      " enter a number: 5\n",
+      "[1, 5]\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Q4. Write a function to return a list \n",
+    "# of prime factors of a given number.\n",
+    "\n",
+    "def primefact(n):\n",
+    "    for i in range(2,int(n**(0.5))+1):\n",
+    "        if n%i==0:\n",
+    "            return 0\n",
+    "    else:\n",
+    "        return 1\n",
+    "n=int(input(\" enter a number: \"))\n",
+    "list=[1]\n",
+    "for i in range(2,n+1):\n",
+    "    if n%i==0:\n",
+    "        if (primefact(i)) ==1:\n",
+    "            list.append(i)\n",
+    "print(list)\n",
+    "    \n",
+    "             "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "58a214b8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      " Enter the number of  List   of Elements: 4\n",
+      " enter the Value of  1 Element : 2\n",
+      " enter the Value of  2 Element : 6\n",
+      " enter the Value of  3 Element : 7\n",
+      " enter the Value of  4 Element : 8\n",
+      "The Second Largest Element in this List is :  7\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Q5. Write a function that finds 2nd\n",
+    "# largest among 4 numbers (Repetitions are allowed, without sorting)\n",
+    "\n",
+    "\n",
+    "NumList = []\n",
+    "list = int(input(\" Enter the number of  List   of Elements: \"))\n",
+    "\n",
+    "for i in range(1, list + 1):\n",
+    "    value = int(input(\" enter the Value of  %d Element : \" %i))\n",
+    "    NumList.append(value)\n",
+    "\n",
+    "first=second = NumList[0]\n",
+    "for j in range(1, list):\n",
+    "    if(NumList[j] > first):\n",
+    "        second = first\n",
+    "        first = NumList[j]\n",
+    "    elif(NumList[j] > second and NumList[j] < first):\n",
+    "        second = NumList[j]\n",
+    "        \n",
+    "\n",
+    "#print(\"The Largest Element in this List is : \", first)\n",
+    "print(\"The Second Largest Element in this List is : \",second )"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7309b7f4",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "945dcd16",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
